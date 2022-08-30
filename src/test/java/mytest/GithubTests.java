@@ -22,7 +22,7 @@ public class GithubTests {
     void pricingTest(){
         open("https://github.com/");
 
-        $(withText("Pricing")).click();//hover не открывает окношко меню у меня. Не получилось.
+        $(withText("Pricing")).hover();
         $(byText("Compare plans")).click();
         $("#compare-features").$$("h2").shouldHave(texts("Free","Team","Enterprise"));
     }
